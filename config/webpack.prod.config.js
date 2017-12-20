@@ -29,13 +29,6 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader?importLoaders=1',
-          'postcss-loader'
-        ]
-      }, {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
@@ -45,7 +38,7 @@ module.exports = {
         loader: 'awesome-typescript-loader'
       },
       {
-        test: /\.scss$/,
+        test: /.(scss|css)$/,
         use: [{
           loader: "style-loader"
         }, {
@@ -53,7 +46,7 @@ module.exports = {
         }, {
           loader: "sass-loader",
           options: {
-            includePaths: ["src/"]
+            include: path.resolve(__dirname, '../src'),
           }
         }]
       },
@@ -62,17 +55,14 @@ module.exports = {
         loader: ExtractTextPlugin.extract('css-loader!sass-loader')
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         loader: 'url-loader'
       },
       {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(ico|eot|otf|webp|pdf|ttf|woff(2)?)(\?.*)?$/,
         use: 'file-loader'
       },
-      {
-        test: /\.(ico|eot|otf|webp|svg|pdf|ttf|woff(2)?)(\?.*)?$/,
-        use: 'file-loader'
-      }]
+    ]
   },
 
   plugins: [

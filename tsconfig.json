@@ -16,6 +16,7 @@
     "traceResolution": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
     "jsx": "react",
     "lib": [
       "dom",
