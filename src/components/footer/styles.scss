@@ -47,4 +47,24 @@
       }
     }
   }
+
+  .additionalText {
+    text-align: center;
+    width: 100%;
+
+    span {
+      font-family: Lato;
+      font-size: 18px;
+      font-weight: 100;
+      color: $jelly-bean;
+      line-height: 1.78;
+
+      &:first-child {
+        font-style: italic;
+      }
+      &:last-child {
+        font-weight: 900;
+      }
+    }
+  }
 }

@@ -18,6 +18,11 @@ const Footer = () => (
         </div>
       </div>
     </div>
+    <div className="additionalText">
+      <span>Vehicles shown on this website are available at</span><br/>
+      <span>Phoenix Holden. DL1931. MRB 936, Clarkson Holden DL1931. MRB 936, Wanneroo Jeep DL1931, Wanneroo Renault DL1931</span><br/>
+      <span>© 2016 All Rights Reserved</span>
+    </div>
   </div>
 );
 
