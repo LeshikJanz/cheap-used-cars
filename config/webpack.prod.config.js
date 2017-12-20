@@ -29,30 +29,16 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader?importLoaders=1',
-          'postcss-loader'
-        ]
-      }, {
-        test: /\.js$/, // Transform all .js files required somewhere with Babel
+        test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
-        options: {
-          transpileOnly: true
-        }
+        loader: 'awesome-typescript-loader'
       },
       {
-        test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader'
-      },
-      {
-        test: /\.scss$/,
+        test: /.(scss|css)$/,
         use: [{
           loader: "style-loader"
         }, {
@@ -60,7 +46,7 @@ module.exports = {
         }, {
           loader: "sass-loader",
           options: {
-            includePaths: ["src/"]
+            include: path.resolve(__dirname, '../src'),
           }
         }]
       },
@@ -68,19 +54,15 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('css-loader!sass-loader')
       },
-      /*
-       * File loader for supporting images, for example, in CSS files.
-       */
       {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'url-loader'
+      },
+      {
+        test: /\.(ico|eot|otf|webp|pdf|ttf|woff(2)?)(\?.*)?$/,
         use: 'file-loader'
       },
-      /* File loader for supporting fonts, for example, in CSS files.
-       */
-      {
-        test: /\.(eot|woff2?|svg|ttf|otf)([\?]?.*)$/,
-        use: 'file-loader'
-      }]
+    ]
   },
 
   plugins: [
