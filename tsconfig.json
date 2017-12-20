@@ -37,7 +37,7 @@
     "**/tests/*"
   ],
   "types": [
-    "node"
+    "node", "react", "react-dom", "redux-form"
   ],
   "typeRoots": [
     "node_modules/@types"

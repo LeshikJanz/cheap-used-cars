@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { Header } from 'components';
+import { Header, Footer } from 'components';
+import './styles.scss';
 
 const Base = ({ children }) => (
-  <div>
+  <div className="baseContainer">
     <Header/>
     {children}
+    <Footer/>
   </div>
 );
 

@@ -1,5 +1,5 @@
 import { ILink } from 'interfaces';
-import { urls } from '../../urls';
+import { urls } from 'urls';
 
 export const headerLinks: ILink[] = [
   {
