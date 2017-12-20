@@ -36,6 +36,12 @@
     "typings",
     "**/tests/*"
   ],
+  "types": [
+    "node"
+  ],
+  "typeRoots": [
+    "node_modules/@types"
+  ],
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true,
     "forkChecker": true,
