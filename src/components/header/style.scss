@@ -43,6 +43,7 @@ $phone_right_margin: 10%;
   margin-top: 19px;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   @include max-width-mixin;
 
   .links {
