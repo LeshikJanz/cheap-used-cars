@@ -36,13 +36,20 @@ module.exports = {
           'postcss-loader'
         ]
       }, {
-        test: /\.js$/,
+        test: /\.js$/, // Transform all .js files required somewhere with Babel
         loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true
+        }
+      },
+      {
+        test: /\.styl$/,
+        loader: 'style-loader!css-loader!stylus-loader'
       },
       {
         test: /\.scss$/,
@@ -61,16 +68,17 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('css-loader!sass-loader')
       },
-      {
-        test: /\.(png|jpg|gif)$/,
-        loader: 'url-loader'
-      },
+      /*
+       * File loader for supporting images, for example, in CSS files.
+       */
       {
         test: /\.(jpg|png|gif)$/,
         use: 'file-loader'
       },
+      /* File loader for supporting fonts, for example, in CSS files.
+       */
       {
-        test: /\.(ico|eot|otf|webp|svg|pdf|ttf|woff(2)?)(\?.*)?$/,
+        test: /\.(eot|woff2?|svg|ttf|otf)([\?]?.*)$/,
         use: 'file-loader'
       }]
   },

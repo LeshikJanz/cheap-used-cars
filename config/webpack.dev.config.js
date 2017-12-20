@@ -70,7 +70,7 @@ module.exports = {
         use: 'file-loader'
       },
       {
-        test: /\.(ico|eot|otf|webp|svg|pdf|ttf|woff(2)?)(\?.*)?$/,
+        test: /\.(eot|woff2?|svg|ttf|otf)([\?]?.*)$/,
         use: 'file-loader'
       }]
   },
