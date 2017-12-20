@@ -1,0 +1,24 @@
+@import "src/styles/colors";
+
+.mainPageContainer {
+  position: relative;
+
+  .backgroundFilter {
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    max-height: 475px;
+    width: 100%;
+    background: $jelly-bean;
+    opacity: 0.63;
+  }
+
+  .searchBlock {
+    height: 475px;
+    width: 100%;
+    background: url(../../../assets/images/cuc-background.jpg) no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    background-position: right;
+  }
+}
