@@ -9,3 +9,9 @@ declare interface ILink extends Identifiable {
   to: string,
   isActive?: boolean
 }
+
+export
+declare interface IAction {
+  type: string,
+  payload: any
+}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '../styles/style.scss';
-import SearchBar from './searchBar';
+import SearchBar from '../containers/searchBar';
 
 const Main = () => (
   <div className="mainPageContainer">

@@ -37,7 +37,7 @@
     "**/tests/*"
   ],
   "types": [
-    "node", "react", "react-dom", "redux-form"
+    "node", "react", "react-dom", "redux-form", "recompose"
   ],
   "typeRoots": [
     "node_modules/@types"
@@ -45,6 +45,7 @@
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true,
     "forkChecker": true,
-    "useCache": true
+    "useCache": true,
+    "errorsAsWarnings": true
   }
 }
